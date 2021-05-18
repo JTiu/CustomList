@@ -17,22 +17,29 @@ namespace CustomList
             NM_Towns f = new NM_Towns("Santa Fe", 6);
             NM_Towns g = new NM_Towns("El Paso", 7);
             NM_Towns h = new NM_Towns("ABQ", 8);
-            NM_Towns[] towns =
+            NM_Towns[] smallTowns =
             {
                 a,b,c,d,e,f,g,h
             };
 
-            foreach (NM_Towns iterationVariable1 in towns)
-            Console.WriteLine($"{iterationVariable1.Name}, has {iterationVariable1.Population}");
+            foreach (NM_Towns iterationVariable1 in smallTowns)
+                Console.WriteLine($"{iterationVariable1.Name}, has {iterationVariable1.Population}");
             Console.ReadLine();
 
-            NM_Towns aTown = towns[3];
-            NM_Towns anotherTown = towns[4];
+            NM_Towns aTown = smallTowns[3];
+            NM_Towns anotherTown = smallTowns[4];
             Console.WriteLine($"{aTown.Name} has {aTown.Population} population: index [3]");
             Console.WriteLine($"{anotherTown.Name} has {anotherTown.Population} population: index [4]");
-            NM_Towns lastTown = towns[towns.Length - 1];
+            NM_Towns lastTown = smallTowns[smallTowns.Length - 1];
+
             Console.WriteLine();
             Console.WriteLine($"The last town is {lastTown.Name}");
+            Console.WriteLine(smallTowns[3]);
+            Console.WriteLine(smallTowns[4]);
+            Console.WriteLine(smallTowns[5]);
+            Console.WriteLine(smallTowns[6]);
+
+
             Console.ReadLine();
 
             //The learning objectives are to use and better understand generics, TDD, operator overloading, how arrays work, how a List<T> works under the hood, properties, fields, custom iterators
@@ -58,8 +65,12 @@ namespace CustomList
             Console.WriteLine(route44);
 
             Console.WriteLine();
-            foreach (BusRoute iterationVaruiable2 in routes)
-            Console.WriteLine(iterationVaruiable2.Origin);
+            foreach (BusRoute iterationVariable2 in routes)
+                Console.WriteLine(iterationVariable2.Origin);
+            Console.ReadLine();
+            Console.Clear();
+            for (int everyItemInArray = 0; everyItemInArray < smallTowns.Length; everyItemInArray++)
+            Console.WriteLine($"Prints all {smallTowns[everyItemInArray]} at index[{everyItemInArray}]");
             Console.ReadLine();
 
         }

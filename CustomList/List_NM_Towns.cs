@@ -20,7 +20,8 @@ namespace CustomList
         }
 
         //can do
-        //public override string ToString() => $"Town:{Name}";
+        public override string ToString() => $"NM Town/s: {Name}";
+       
 
     }
 }
