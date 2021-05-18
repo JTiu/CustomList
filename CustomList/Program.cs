@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomList
 {
@@ -10,6 +6,34 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
+            //var town names
+
+
+            NM_Towns a = new NM_Towns("Mesilla", 1);
+            NM_Towns b = new NM_Towns("Las Cruces", 2);
+            NM_Towns c = new NM_Towns("Bernalillo", 3);
+            NM_Towns d = new NM_Towns("Roswell", 4);
+            NM_Towns e = new NM_Towns("Portales", 5);
+            NM_Towns f = new NM_Towns("Santa Fe", 6);
+            NM_Towns g = new NM_Towns("El Paso", 7);
+            NM_Towns h = new NM_Towns("ABQ", 8);
+            NM_Towns[] towns =
+            {
+                a,b,c,d,e,f,g,h
+            };
+
+            foreach (NM_Towns iterationVariable1 in towns)
+            Console.WriteLine($"{iterationVariable1.Name}, has {iterationVariable1.Population}");
+            Console.ReadLine();
+
+            NM_Towns aTown = towns[3];
+            NM_Towns anotherTown = towns[4];
+            Console.WriteLine($"{aTown.Name} has {aTown.Population} population: index [3]");
+            Console.WriteLine($"{anotherTown.Name} has {anotherTown.Population} population: index [4]");
+            NM_Towns lastTown = towns[towns.Length - 1];
+            Console.WriteLine();
+            Console.WriteLine($"The last town is {lastTown.Name}");
+            Console.ReadLine();
 
             //The learning objectives are to use and better understand generics, TDD, operator overloading, how arrays work, how a List<T> works under the hood, properties, fields, custom iterators
 
@@ -24,7 +48,9 @@ namespace CustomList
                 route44,
                 route42,
                 route40,
-                route31
+                route31,
+                new BusRoute(32, "Hatch", "Las Cruces"),
+                new BusRoute(34, "Hatch", "Mesilla")
             };
 
             Console.WriteLine(route40);
@@ -32,10 +58,8 @@ namespace CustomList
             Console.WriteLine(route44);
 
             Console.WriteLine();
-            foreach (BusRoute route in routes)
-            {
-                Console.WriteLine(route);
-            }
+            foreach (BusRoute iterationVaruiable2 in routes)
+            Console.WriteLine(iterationVaruiable2.Origin);
             Console.ReadLine();
 
         }

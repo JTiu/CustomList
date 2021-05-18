@@ -18,12 +18,9 @@ namespace CustomList
             this.Number = number;
             this.Origin = origin;
             this.Destination = destination;
-
-            //method
-            
         }
+        //method
         public override string ToString() => $"{Number}: starts in {Origin} goes to -> {Destination}";
-
 
     }
 
