@@ -5,8 +5,11 @@ namespace CustomList
     class Program
     {
         static void Main(string[] args)
+
+
         {
-            //var town names
+            Console.WriteLine("Print for each town, the name & population:\n");
+            //var town names in New Mexico, no 'i', string name and int population (population not accurate)
 
 
             NM_Towns a = new NM_Towns("Mesilla", 1);
@@ -17,27 +20,37 @@ namespace CustomList
             NM_Towns f = new NM_Towns("Santa Fe", 6);
             NM_Towns g = new NM_Towns("El Paso", 7);
             NM_Towns h = new NM_Towns("ABQ", 8);
+            NM_Towns j = new NM_Towns("White Sands", 9);
+            NM_Towns k = new NM_Towns("Alamogordo", 10);
+
             NM_Towns[] smallTowns =
             {
-                a,b,c,d,e,f,g,h
+                a,b,c,d,e,f,g,h, j, k
             };
 
+            //for each, prints name & population
             foreach (NM_Towns iterationVariable1 in smallTowns)
-                Console.WriteLine($"{iterationVariable1.Name}, has {iterationVariable1.Population}");
+            Console.WriteLine($"{iterationVariable1.Name}, has {iterationVariable1.Population}");
             Console.ReadLine();
 
+            // prints index positions 3, 4, 9
+            Console.WriteLine("Print for index 3, 4, 9, the name & population:\n");
             NM_Towns aTown = smallTowns[3];
             NM_Towns anotherTown = smallTowns[4];
+            NM_Towns yetAnotherTown = smallTowns[9];
             Console.WriteLine($"{aTown.Name} has {aTown.Population} population: index [3]");
             Console.WriteLine($"{anotherTown.Name} has {anotherTown.Population} population: index [4]");
+            Console.WriteLine($"{yetAnotherTown.Name} has {yetAnotherTown.Population} population: index [9]");
             NM_Towns lastTown = smallTowns[smallTowns.Length - 1];
 
+            //prints the last town on the list
             Console.WriteLine();
-            Console.WriteLine($"The last town is {lastTown.Name}");
+            Console.WriteLine($"\nThe last town is {lastTown.Name}");
+            Console.WriteLine("\nPrints index postions 0 to 3");
+            Console.WriteLine(smallTowns[0]);
+            Console.WriteLine(smallTowns[1]);
+            Console.WriteLine(smallTowns[2]);
             Console.WriteLine(smallTowns[3]);
-            Console.WriteLine(smallTowns[4]);
-            Console.WriteLine(smallTowns[5]);
-            Console.WriteLine(smallTowns[6]);
 
 
             Console.ReadLine();
